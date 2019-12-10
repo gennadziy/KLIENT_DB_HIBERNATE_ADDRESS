@@ -1,10 +1,22 @@
 package gennadziy.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "klients")
 public class Klient {
+    @Id
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(name = "name")
     private String name;
+    @Column(name = "year")
     private int year;
+    @Column(name = "plec")
     private String plec;
+    @Column(name = "blocked")
     private boolean blocked;
 
     public int getId () {

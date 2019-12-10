@@ -3,10 +3,12 @@
 <html>
 <head>
     <title>KLIENTS</title>
+    <link href="<c:url value="/res/style.css"/>" rel="stylesheet" type="text/css"/>
+
 </head>
 <body>
 
-<h2>Klients</h2>
+<h2 >Klients</h2>
 <table>
     <tr>
         <th>id</th>

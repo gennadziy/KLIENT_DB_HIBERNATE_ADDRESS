@@ -19,7 +19,7 @@ public class KlientController {
 
 
     @Autowired
-    public void setFilmService(KlientService klientService) {
+    public void setKlientService(KlientService klientService) {
         this.klientService = klientService;
     }
 
