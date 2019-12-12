@@ -60,7 +60,13 @@ public class Klient {
     }
 
     @Override
-    public String toString() {
-        return id + " " + name + " " + year + " " + plec + " " + blocked;
+    public String toString () {
+        return "Klient{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", year=" + year +
+                ", plec='" + plec + '\'' +
+                ", blocked=" + blocked +
+                '}';
     }
 }

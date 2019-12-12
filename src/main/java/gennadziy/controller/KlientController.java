@@ -1,6 +1,8 @@
 package gennadziy.controller;
 
+import gennadziy.model.Adress;
 import gennadziy.model.Klient;
+import gennadziy.service.AdressService;
 import gennadziy.service.KlientService;
 import gennadziy.service.KlientServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +17,15 @@ import java.util.List;
 @Controller
 public class KlientController {
 
-    private KlientService klientService;
+    private AdressService adressService;
 
+
+    @Autowired
+    public void setAdressService ( AdressService adressService ) {
+        this.adressService = adressService;
+    }
+
+    private KlientService klientService;
 
     @Autowired
     public void setKlientService(KlientService klientService) {
@@ -31,6 +40,16 @@ public class KlientController {
         modelAndView.addObject("klienstList", klients);
         return modelAndView;
     }
+
+    @RequestMapping(value = "/adr", method = RequestMethod.GET)
+    public ModelAndView allAdress() {
+        List<Adress> adresses = adressService.allAdress();
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("adress");
+        modelAndView.addObject("adresses", adresses);
+        return modelAndView;
+    }
+
     @RequestMapping(value = "/edit", method = RequestMethod.POST)
     public ModelAndView editKlient(@ModelAttribute("klient") Klient klient) {
         ModelAndView modelAndView = new ModelAndView();

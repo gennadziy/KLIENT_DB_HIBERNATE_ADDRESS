@@ -35,6 +35,9 @@
 
 <h2>Add</h2>
 <c:url value="/add" var="add"/>
+<c:url value="/adr" var="adr"/>
 <a href="${add}">Add new klient</a>
+<p><a href="/adr">Address</a></p>
+
 </body>
 </html>

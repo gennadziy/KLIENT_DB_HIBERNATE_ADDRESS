@@ -11,6 +11,7 @@ import java.util.List;
 @Service
 public class KlientServiceImpl implements KlientService {
     private KlientDAO klientDAO;
+
     @Autowired
     public void setKlientDAO ( KlientDAO klientDAO ) {
         this.klientDAO = klientDAO;
